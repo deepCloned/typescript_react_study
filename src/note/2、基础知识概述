@@ -1,0 +1,44 @@
+## 基础知识
+
+三连问：
+1、为什么会出现 react 框架
+2、react 的出现解决了什么问题
+3、为什么越来越多的人使用 react
+
+### react 概念
+
+react设计理念
+
+* 单向数据流
+* 虚拟dom
+* 组件化
+
+单项数据流
+
+
+随机生成机器人图片网站：`https://robohash.org/${id}`
+
+使用 interface 定义组件 props 传值
+
+```
+interface RobotProps {
+  id: Number,
+  name: String,
+  email: String
+}
+
+const Robot: React.FC<RobotProps> = ({id, name, email}) => {
+  return (
+    <></>
+  )
+}
+```
+
+
+
+### tips
+* 安装最新版 node-sass 报错
+原因：暂未发现
+解决方法：安装5.0以下版本的 node-sass  `npm install node-sass@4.14.1 --save-dev`
+
+
