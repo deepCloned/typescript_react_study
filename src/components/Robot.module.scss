@@ -1,11 +1,24 @@
 .robotItem{
+  padding: 4px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   background: #f1939c;
   cursor: pointer;
+  font-size: 14px;
   &:hover{
     transition: all .2s ease-in-out;
-    transform: scale(1.04);
+  }
+}
+.addBtn{
+  height: 26px;
+  padding: 4px 10px;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 2px;
+  &:hover{
+    color: #5468ff;
   }
 }

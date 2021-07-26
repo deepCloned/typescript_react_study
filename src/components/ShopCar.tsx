@@ -2,24 +2,40 @@ import React, { useState } from 'react'
 
 import styles from './ShopCar.module.scss'
 
-const ShopCar: React.FC = () => {
-  const [shopList] = useState([{id: 123, name: 456}])
+interface Robot {
+  name: number,
+  id: string,
+  email: string,
+  count?: number
+}
+
+interface RobotProps {
+  robotList: Robot[]
+}
+
+const ShopCar: React.FC<RobotProps> = ({robotList}) => {
   const [showShopList, setShowShopList] = useState(false)
   
   return (
     <div className={styles.shopCar}>
       <button
-        className={styles.toggleBtn}
+        className={`center ${styles.toggleBtn}`}
         onClick={() => setShowShopList(!showShopList)}
       >
         购物车
       </button>
-      <ul style={{
+      <ul
+        className={styles.shopList}
+        style={{
         display: showShopList ? 'block' : 'none'
       }}>
-        {shopList.map(shop => {
+        {robotList.map(robot => {
           return (
-            <span>{shop.name}</span>
+            <li className={styles.shopItem}>
+              <span>{robot.name}</span>
+              <span>{robot.email}</span>
+              <span>{robot.count}</span>
+            </li>
           )
         })}
       </ul>

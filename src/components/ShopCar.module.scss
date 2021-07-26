@@ -2,12 +2,13 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   padding: 10px 0;
 }
 
 .toggleBtn{
-  display: inline-block;
-  line-height: 1.5;
+  width: 100px;
+  height: 30px;
   padding: 4px 15px;
   border: 1px solid transparent;
   background: #fff;
@@ -21,6 +22,17 @@
   }
 }
 .shopList{
-  
+  width: 240px;
+  padding: 6px 0;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  margin-top: 10px;
 }
-.shopItem{}
+.shopItem{
+  padding: 2px 10px;
+  cursor: pointer;
+  &:hover{
+    background: #f5f7fa;
+  }
+}
